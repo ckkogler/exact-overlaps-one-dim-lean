@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "checked_utc": "20261004T001550652446Z",
+  "official_pipeline_commit": "65f0154ed776cd26c224254aa57b379137f28b0d",
+  "official_api_sha256": {
+    "scripts/submission_contract.py": "724f82211ef702e2d1b4e5012183e532bd8f8ba03ba676022e4722a420c5be75",
+    "scripts/source_requirements.py": "971950a45500ad8ba8c9061eb51716bc1c38f411ff877c447b6de527b23d2c6d",
+    "scripts/verify_submission.py": "1c1b4b7c8319bd31960d4484e747d23eb6664d6bf7e4e901bc724aacf34f282d",
+    "scripts/detect_license.rb": "7cc4ad2c63633b307c42808cbe29b6df799ef93f6c7560456e2637bc376f35f8",
+    "toolchains.json": "fd40347e4b586e7c42233b35f11efb006d25033b9a7ded9565719edf7aa98354",
+    "allowed-challenge-repositories.json": "bfb114daf5ead308052ccec85b1029aa0c875bebe6eec8f642df57f2ddbd8971",
+    "Gemfile": "c0197db488ffa8e154edea20a26fa7a1c1c3e89675dfce43e72c16831966dd9b",
+    "Gemfile.lock": "d93caad3b41ab81138c1770dcde1415ac9aa47e8e469ea25b3f876a9f3d2cdff"
+  },
+  "checks": {
+    "metadata": "pass",
+    "source_provenance": "pass (metadata schema)",
+    "module_headers_and_source_sizes": "pass",
+    "comparator_config": "pass",
+    "toolchain_minimum": "pass",
+    "dependencies_and_mathlib_alignment": "pass",
+    "license": "pass",
+    "challenge_limits": "pass"
+  },
+  "challenge": {
+    "bytes": 10278,
+    "lines": 251,
+    "within_limits": true
+  },
+  "toolchain": "v4.35.0-rc2",
+  "license": {
+    "detector": "Licensee",
+    "version": "10.0.0",
+    "detected_spdx": "0BSD",
+    "declared_spdx": "0BSD",
+    "source_sha256": "13f671f1a6a2d4386a3d28183ae37a258eea59db7b86b927c82100ebe062c136"
+  },
+  "dependency_revisions": {
+    "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+    "plausible": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+    "LeanSearchClient": "95e037bfdc31d3916ac615446847fb01960e2719",
+    "importGraph": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+    "proofwidgets": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+    "aesop": "75d936c7af167cc93fac0d31237682fc2204591d",
+    "Qq": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+    "batteries": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+    "Cli": "2842b9871b04862f944c032e34052cb9448ccb71"
+  },
+  "scope": "Actual official local metadata, source requirements, comparator configuration, toolchain, dependency and Licensee APIs. Full exact repository hashes are retained in the final private completion audit. Hosted execution, registry review and registration are not claimed.",
+  "checked_metadata_sha256": "0010db538e20078a3c06891fccec587e3561572348b48ebdf55cc16ee53321db",
+  "checked_packaging_source_sha256": {
+    ".github/workflows/verify.yml": "a5ed8cb3391b6f958f43049dccd64acb74168c2c63319444082e83407026918f",
+    ".gitignore": "83d18a9c6795e38ed6dffc3828ce126d7ba72e7e0dcb2a6e32d1e45a2e9981c7",
+    "COVERAGE.md": "60578f2552f83104a6859606d998635ee8b58850567b4c1884d1eb2ae2badd33",
+    "FORMALIZATION.md": "cb0ea6e8b9085296671aeffdbbafcd8bbddec8b2f0bc35fb9fcd33326096bdba",
+    "LICENSE": "13f671f1a6a2d4386a3d28183ae37a258eea59db7b86b927c82100ebe062c136",
+    "README.md": "29d2483b2844b1cbeafb43fbc466b173f053a0e1b5f7b999876ff9b12a5b0afa",
+    "comparator.json": "3dd9846aab6e6c1fe5df73ea24420e4d7537efcebba3bc1331b2ebbcee8b06cd",
+    "formalization.yaml": "0010db538e20078a3c06891fccec587e3561572348b48ebdf55cc16ee53321db",
+    "lake-manifest.json": "9462d2995c85d876facd90dbd067dd565c56a19d539b5970bfb04de15e4413c1",
+    "lakefile.toml": "d903a659322cd665651fa2e2b8a168da0d3968b689bae8d4c81a5c04d0027c08",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "provenance/BIBLIOGRAPHY.md": "391ccde4d4be64e529a7a2718e54e3229678b9ba6ebbc19f7b889bdc55fc0cb9",
+    "provenance/LpSelfSimilar-LICENSE": "91f30b27b3723ccdda0f91a1eeef974e61dda88b2ca145e25e5c5320d69574ac",
+    "provenance/README.md": "f691ded4f054707acedfd69b8891486772094059ca4b25e62d5f283ad9e9d8f8",
+    "provenance/REUSE.json": "44d4ccb4478db948e8419ccbfdf4deafefa5951760d9b6e453747ded4958cd10",
+    "provenance/SOURCE_NOTES.md": "ec44ded9d32f0ba9a9b186b8648b605adbb29d42dd3afb49caed49d5ae71d7e3",
+    "scripts/validate_local_contract.py": "4a967a82e5ffe7be1a351622aa14b1ced34df23749d9bab121559b905055c3a3",
+    "scripts/verify_palomar.py": "86e4f06f70c006ab1064c5e4f7bf03a422d8e29e7f1a65eb91704fee996e7c0d"
+  },
+  "proof_source_snapshot": "proof-source-snapshot.json",
+  "proof_source_snapshot_sha256": "1d932a8fa6d2edc483f32cfda5b0127c7fa26ec10552c8620cefb4a92f05a374",
+  "challenge_sha256": "fead50b66371c92ea31bcfeb100f5a3156a96c7e3d7bcf27ef596c5fb76fbb1d",
+  "source_module_count": 596,
+  "local_validation_errors": []
+}

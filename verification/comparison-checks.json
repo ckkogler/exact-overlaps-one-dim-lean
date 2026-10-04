@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "started_utc": "20261003T233522925769Z",
+  "exit_code": 0,
+  "command": "python3 scripts/verify_palomar.py",
+  "source_snapshot": "comparison-source-snapshot.json",
+  "source_snapshot_sha256": "959c63397876cb9cafd1148a6b3f72ccdd1e3999fe80946ad67190d085b7810c",
+  "verifier_script_sha256": "86e4f06f70c006ab1064c5e4f7bf03a422d8e29e7f1a65eb91704fee996e7c0d",
+  "strict_comparison": "pass",
+  "theorem_names": [
+    "ExactOverlaps.SelfSimilar.System.weight_sum_ennreal",
+    "ExactOverlaps.SelfSimilar.System.wordWeight_sum",
+    "ExactOverlaps.SelfSimilar.System.jointWordLaw_support_finite",
+    "ExactOverlaps.SelfSimilar.System.jointWordEntropy_subadditive",
+    "ExactOverlaps.SelfSimilar.System.jointWordEntropy_div_tendsto_rate",
+    "ExactOverlaps.SelfSimilar.System.theorem_1_1",
+    "ExactOverlaps.SelfSimilar.corollary_1_2",
+    "ExactOverlaps.Entropy.independent_finite_entropy_loss_exists"
+  ],
+  "definition_names": [],
+  "challenge_intentional_holes": 5,
+  "proved_solution_sorry_count": 0,
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "kernels": {
+    "con-ron": {
+      "status": "pass",
+      "declarations_accepted": 59592,
+      "mode": "--verified"
+    },
+    "NanoDa": {
+      "status": "pass"
+    },
+    "Lean default": {
+      "status": "pass"
+    }
+  },
+  "tool_sha256": {
+    "lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "leanexport": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "leanchecker": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+    "nanoda_bin": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8",
+    "con-ron": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+    "bubblewrap": "55f6c32dba6e0f8bd79447b774d4152c521d5631ef215c450ebd2b86154d36bd"
+  },
+  "bubblewrap_version": "0.12.0",
+  "sandbox_enabled": true,
+  "sources_unchanged": true,
+  "output_sha256": "37de5c4af2ebfed513b656dbe09ecf4217d74210dc1f1f54071968308eb40c8e",
+  "scope_note": "Local strict statement/definition comparison and real exported-proof replay. No registry endpoint or hosted workflow was invoked."
+}

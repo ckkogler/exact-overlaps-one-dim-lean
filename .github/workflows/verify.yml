@@ -1,0 +1,74 @@
+name: Verify Lean proofs and local Palomar contract
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      BUNDLE_FROZEN: "true"
+      BUNDLE_GEMFILE: ${{ github.workspace }}/.lake/palomar-pipeline/Gemfile
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: PalomarRegistry/PalomarSubmission
+          ref: 65f0154ed776cd26c224254aa57b379137f28b0d
+          path: .lake/palomar-pipeline
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.11.10"
+      - uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b
+        with:
+          ruby-version: "3.3.12"
+          bundler-cache: true
+          working-directory: .lake/palomar-pipeline
+      - name: Install locked policy dependencies
+        run: python -m pip install --disable-pip-version-check --require-hashes --no-deps -r .lake/palomar-pipeline/requirements.txt
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-github-cache: false
+          use-mathlib-cache: true
+      - name: Build the complete library and audit authored axioms
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .lake/verification
+          lake build 2>&1 | tee .lake/verification/build.log
+          lake env lean Verification.lean 2>&1 | tee .lake/verification/axioms.log
+          git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json comparator.json
+      - name: Validate metadata, source requirements, dependency pins and license
+        run: python scripts/validate_local_contract.py
+      - name: Install pinned bubblewrap
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq meson ninja-build libcap-dev pkg-config
+          echo "COMPARATOR_BWRAP=$(.lake/palomar-pipeline/scripts/install_bwrap.sh "$RUNNER_TEMP/exact-overlaps-bwrap")" >> "$GITHUB_ENV"
+      - name: Compare Challenge and Solution and replay both independent kernels
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/verify_palomar.py 2>&1 | tee .lake/verification/comparator.log
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: local-verification-evidence
+          path: .lake/verification/
+          include-hidden-files: true
+          if-no-files-found: warn

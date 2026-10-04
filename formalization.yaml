@@ -1,0 +1,157 @@
+version: v0.4
+project:
+  name: The exact overlaps conjecture for self-similar measures on the real line
+  description: >-
+    For a probability measure supported on finitely many contracting real
+    similarities, the dimension of its stationary measure is the minimum of
+    one and the affine random-walk entropy rate divided by the absolute
+    Lyapunov exponent. Ratios may be signed and unequal, parameters arbitrary
+    real numbers, and listed weights zero. No separation condition is assumed.
+    For a finite family without exact overlaps, the nonempty compact attractor
+    has dimension min(1,s), where the sum of the absolute contraction ratios
+    to the power s is one. An entropy inequality bounds the information lost
+    under addition of m independent finitely supported real random variables
+    by 30*m times the sum of their variance energies. Supporting results include
+    exact dimensionality, Hochman's general conditional-entropy theorem,
+    Gaussian approximation, entropy growth, and stopped-block estimates.
+  authors: [Constantin Kogler]
+  responsible_maintainers: [Constantin Kogler]
+  license: 0BSD
+classification:
+  arxiv: [math.DS, math.PR, math.CA]
+  msc2020: [28A80, 60G50]
+sources:
+  - title: The exact overlaps conjecture for self-similar measures on the real line
+    authors: [Samuel Kittle, Constantin Kogler]
+    type: paper
+    relationship: formalizes
+    location: Theorems 1.1 and 1.3, Corollaries 1.2 and 3.4, Lemmas 2.1–2.3, 3.1–3.2, 3.6–3.9 and 3.11, Propositions 3.3, 3.10 and 3.12, and Definition 3.5
+    note: >-
+      Primary mathematical source. Informal remarks and examples are not
+      additional formalization targets. No public publication identifier is
+      asserted for this manuscript. See COVERAGE.md and FORMALIZATION.md.
+    license: The source work is not relicensed by the software license
+  - title: On self-similar sets with overlaps and inverse theorems for entropy
+    authors: [Michael Hochman]
+    id: https://doi.org/10.4007/annals.2014.180.2.7
+    type: paper
+    relationship: formalizes
+    location: Theorem 1.4 and the entropy-growth and dimension inputs required for it
+    note: >-
+      Annals of Mathematics 180 (2014), 773–822. The full general
+      conditional-entropy conclusion and its application to primary Lemma 3.2
+      are proved internally, with signed and unequal ratios. The development
+      repairs auxiliary arguments while preserving the required conclusion.
+  - title: Dimension theory of iterated function systems
+    authors: [De-Jun Feng, Huyi Hu]
+    type: paper
+    relationship: independently-proves
+    location: Exact dimensionality for the finite strictly contracting real systems used here
+    note: >-
+      Communications on Pure and Applied Mathematics 62 (2009), 1435–1500.
+      The needed exact-dimensionality and entropy-dimension statements are
+      proved in this repository. The full generality of this source is not claimed.
+related_formalizations:
+  - id: lp-densities-lean, commit 1ede5c88a2f7fcbb43907447f2363db89fbde0a2
+    relationship: builds-on
+    note: >-
+      Selected elementary finite-entropy and self-similar foundations were
+      adapted from Constantin Kogler's earlier 0BSD development. The adapted
+      sources are contained here; no sibling project is a dependency.
+      Provenance and retained notices are recorded in provenance/.
+status:
+  scope: >-
+    The selected development comprises all seventeen numbered primary results,
+    Definition 3.5, necessary supporting inputs and full Hochman Theorem 1.4.
+    All seventeen results and the full Hochman input have compiled and received
+    independent agent review. The complete stopped-block embedding includes
+    actual bounded starts, ordering, independence and the exact joint law.
+    The full default build and complete authored-declaration axiom audit have
+    passed. Strict comparison of all eight Challenge claims and actual Lean,
+    NanoDa and con-ron kernel checks have passed. A separate isolated Git
+    checkout freshly rebuilt all 592 proof modules and passed the same
+    3,622-declaration audit against the exact 598-file proof/configuration
+    snapshot and nine pinned dependencies. Final public-commit recovery is
+    checked separately.
+    Challenge states two main theorems and a corollary, with preliminary
+    entropy subadditivity and its ordinary rate limit, and three proved elementary
+    normalization and support lemmas needed by the definitions. All eight
+    Challenge theorem declarations are compared. Its five intentional holes are excluded from the proved
+    Solution and from the following proved-development sorry count.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+automation:
+  methods:
+    - method: agent
+      models: [GPT-6 (Codex)]
+      framework: Codex
+      tool_setup: >-
+        A coordinator and three concurrent proof agents developed Lean proofs
+        with compiler feedback, Mathlib tactics, exact-source axiom audits and
+        cross-agent semantic review. Lean compilation used a Slurm CPU allocation.
+        No unchecked proof certificate is used.
+      prompting_notes: >-
+        Preserve the formal source statements, constants and generality; prove
+        necessary external inputs; document mathematical discrepancies; exclude
+        informal remarks as separate targets; and prepare a self-contained
+        local submission without publishing it.
+  notes: >-
+    Constantin Kogler supplied the mathematical source, direction and scope and
+    is responsible for the formalization. Codex authored and revised Lean proofs
+    and verification tooling. The mathematical source proofs are attributed to
+    their named human authors. No claim of independent human review is made.
+    Model-inference costs and aggregate inference time were not reliably measured.
+fidelity:
+  divergences: >-
+    The statements use standard lower Hausdorff dimension, with exact
+    dimensionality and its identification proved separately. The entropy rate
+    is an explicit infimum, proved equal to the ordinary limit. Energy uses the
+    extended nonnegative reals for general measures and is proved finite before
+    real conversion for finite laws. The compact attractor is explicitly
+    nonempty. Necessary atom, endpoint, counting and auxiliary entropy argument
+    corrections are described in FORMALIZATION.md. No selected theorem is
+    replaced by a conditional assumption or restricted to homogeneous,
+    positive-ratio, algebraic or separated systems.
+review:
+  status: agent-reviewed
+  reviewers: []
+  notes: >-
+    Distinct proof agents reviewed completed modules against the mathematical
+    sources and actual Lean definitions, checking quantifiers, degeneracies,
+    signed normalization, probability laws and dependencies. The coordinator
+    reviewed integration and final mathematical statements. The full repository
+    build, all-authored axiom audit, strict comparison and three kernel checks
+    have passed on recorded source snapshots. A fresh isolated relocation
+    build and axiom audit have also passed for the proof/configuration snapshot.
+    Exact outcomes and scope are recorded in verification/; final public Git
+    history and recovery-bundle readback are separate checks.
+    No remote registry check, registration or human peer review is claimed.
+alignment:
+  namespace: ExactOverlaps
+  coverage_index: COVERAGE.md
+  statements:
+    - source: Probability normalization and finite support used in the definitions
+      lean: [ExactOverlaps.SelfSimilar.System.weight_sum_ennreal, ExactOverlaps.SelfSimilar.System.wordWeight_sum, ExactOverlaps.SelfSimilar.System.jointWordLaw_support_finite]
+      status: proved
+    - source: Subadditivity of affine random-walk entropy
+      lean: ExactOverlaps.SelfSimilar.System.jointWordEntropy_subadditive
+      module: ExactOverlaps.SelfSimilar.RandomWalkEntropy
+      status: proved
+    - source: The ordinary limit defining affine random-walk entropy
+      lean: ExactOverlaps.SelfSimilar.System.jointWordEntropy_div_tendsto_rate
+      module: ExactOverlaps.SelfSimilar.RandomWalkEntropy
+      status: proved
+    - source: Theorem 1.1
+      lean: ExactOverlaps.SelfSimilar.System.theorem_1_1
+      module: ExactOverlaps.MainTheorem.Theorem11
+      status: proved
+    - source: Corollary 1.2
+      lean: ExactOverlaps.SelfSimilar.corollary_1_2
+      module: ExactOverlaps.MainTheorem.Corollary12
+      status: proved
+    - source: Theorem 1.3
+      lean: ExactOverlaps.Entropy.independent_finite_entropy_loss_exists
+      module: ExactOverlaps.Entropy.EntropyLossRandomVariables
+      status: proved
+acknowledgements: Lean, Mathlib, Comparator, leanexport, NanoDa, con-ron and their contributors. Third-party materials retain their respective licenses.

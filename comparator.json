@@ -1,0 +1,21 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "ExactOverlaps.SelfSimilar.System.weight_sum_ennreal",
+    "ExactOverlaps.SelfSimilar.System.wordWeight_sum",
+    "ExactOverlaps.SelfSimilar.System.jointWordLaw_support_finite",
+    "ExactOverlaps.SelfSimilar.System.jointWordEntropy_subadditive",
+    "ExactOverlaps.SelfSimilar.System.jointWordEntropy_div_tendsto_rate",
+    "ExactOverlaps.SelfSimilar.System.theorem_1_1",
+    "ExactOverlaps.SelfSimilar.corollary_1_2",
+    "ExactOverlaps.Entropy.independent_finite_entropy_loss_exists"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

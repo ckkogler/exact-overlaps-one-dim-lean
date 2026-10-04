@@ -1,0 +1,9 @@
+# Mathematical sources
+
+- Samuel Kittle and Constantin Kogler, *The exact overlaps conjecture for self-similar measures on the real line*. Primary source for the seventeen numbered results and Definition 3.5 mapped in [COVERAGE.md](../COVERAGE.md).
+- Michael Hochman, *On self-similar sets with overlaps and inverse theorems for entropy*, Annals of Mathematics **180** (2014), no. 2, 773–822. Required external result: Theorem 1.4. [Official journal entry](https://annals.math.princeton.edu/2014/180-2/p07); [DOI: 10.4007/annals.2014.180.2.7](https://doi.org/10.4007/annals.2014.180.2.7).
+- De-Jun Feng and Huyi Hu, *Dimension theory of iterated function systems*, Communications on Pure and Applied Mathematics **62** (2009), no. 11, 1435–1500. Source for the broader exact-dimensionality theory; the needed finite real self-similar case is proved internally. [Author manuscript and journal reference](https://arxiv.org/abs/1002.2036).
+- Péter P. Varjú, *Entropy rates in the dimension theory of self-similar measures*, arXiv:2509.22042, version 2, 22 March 2026. Conjecture 3 states the general random-walk entropy formula used for the comparison in [FORMALIZATION.md](../FORMALIZATION.md). [Versioned source](https://arxiv.org/abs/2509.22042v2).
+- Ariel Rapaport, *Proof of the exact overlaps conjecture for systems with algebraic contractions*, Annales Scientifiques de l'École Normale Supérieure (4) **55** (2022), no. 5, 1357–1377. Historical result for algebraic contraction ratios and arbitrary translations; not an additional formalization target. [Official journal entry](https://smf.emath.fr/publications/preuve-de-la-conjecture-de-chevauchements-exacts-pour-des-systemes-contractions); [DOI: 10.24033/asens.2518](https://doi.org/10.24033/asens.2518).
+
+These citations identify mathematical sources. They are not imported axioms or additional runtime dependencies.

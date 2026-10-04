@@ -1,0 +1,71 @@
+{
+  "upstream_project": "LpSelfSimilar",
+  "upstream_author": "Constantin Kogler",
+  "copyright_year": 2026,
+  "license": "0BSD",
+  "license_notice": "LpSelfSimilar-LICENSE",
+  "integration": "Adapted authored sources are included locally; no sibling-project dependency.",
+  "groups": [
+    {
+      "area": "finite entropy",
+      "upstream_modules": [
+        "LpSelfSimilar/Entropy/Finite.lean",
+        "LpSelfSimilar/Entropy/Bounds.lean",
+        "LpSelfSimilar/Entropy/Conditioning.lean",
+        "LpSelfSimilar/Entropy/ChainRule.lean"
+      ],
+      "local_modules": [
+        "ExactOverlaps/Entropy/Finite.lean",
+        "ExactOverlaps/Entropy/Bounds.lean",
+        "ExactOverlaps/Entropy/Conditioning.lean",
+        "ExactOverlaps/Entropy/ChainRule.lean"
+      ],
+      "adaptations": [
+        "Namespace and imports changed to ExactOverlaps",
+        "Lean module/public interface migration",
+        "Current tactic/API spellings"
+      ]
+    },
+    {
+      "area": "finite probability moments and integration",
+      "upstream_modules": [
+        "LpSelfSimilar/Probability/FiniteMoments.lean",
+        "LpSelfSimilar/Probability/ConditionalMoments.lean",
+        "LpSelfSimilar/Probability/FiniteIntegration.lean"
+      ],
+      "local_modules": [
+        "ExactOverlaps/Probability/FiniteMoments.lean",
+        "ExactOverlaps/Probability/ConditionalMoments.lean",
+        "ExactOverlaps/Probability/FiniteIntegration.lean"
+      ],
+      "adaptations": [
+        "Namespace and imports changed to ExactOverlaps",
+        "Lean module/public interface migration",
+        "Connection to the local actual conditional-PMF interface"
+      ]
+    },
+    {
+      "area": "self-similar and entropy foundations",
+      "upstream_modules": [
+        "LpSelfSimilar/SelfSimilar/Definitions.lean",
+        "LpSelfSimilar/SelfSimilar/CompactSupport.lean",
+        "LpSelfSimilar/SelfSimilar/StoppingWords.lean",
+        "LpSelfSimilar/Entropy/InjectiveSupport.lean",
+        "LpSelfSimilar/Entropy/ConditionalStatistic.lean"
+      ],
+      "local_modules": [
+        "ExactOverlaps/SelfSimilar/Definitions.lean",
+        "ExactOverlaps/SelfSimilar/CompactSupport.lean",
+        "ExactOverlaps/SelfSimilar/Words.lean",
+        "ExactOverlaps/SelfSimilar/StoppingWords.lean",
+        "ExactOverlaps/SelfSimilar/EntropySupport.lean",
+        "ExactOverlaps/SelfSimilar/EntropyComparison.lean"
+      ],
+      "adaptations": [
+        "Euclidean similarities specialized to signed real affine similarities",
+        "Actual stationarity, compact-support and finite-word foundations",
+        "Finite entropy support and conditional-statistic arguments adapted to natural logarithms"
+      ]
+    }
+  ]
+}

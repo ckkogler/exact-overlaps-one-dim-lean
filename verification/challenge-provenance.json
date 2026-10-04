@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "checked_utc": "2026-10-04T00:11:43.789575+00:00",
+  "official_submission_commit": "65f0154ed776cd26c224254aa57b379137f28b0d",
+  "checked_sources_sha256": {
+    "Challenge.lean": "fead50b66371c92ea31bcfeb100f5a3156a96c7e3d7bcf27ef596c5fb76fbb1d",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lakefile.toml": "d903a659322cd665651fa2e2b8a168da0d3968b689bae8d4c81a5c04d0027c08",
+    "lake-manifest.json": "9462d2995c85d876facd90dbd067dd565c56a19d539b5970bfb04de15e4413c1",
+    "comparator.json": "3dd9846aab6e6c1fe5df73ea24420e4d7537efcebba3bc1331b2ebbcee8b06cd"
+  },
+  "canonical_root_authentication": {
+    "repository": "leanprover-community/mathlib4",
+    "method": "canonical HTTPS remote semantic-version release tag",
+    "tag": "v4.35.0-rc2",
+    "revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+    "raw_refs": "065356127b1dc0016f66b7283ce0ce2c4055aa55\trefs/tags/v4.35.0-rc2\n",
+    "official_allowlist_allows_release_tags": true
+  },
+  "packages": {
+    "Cli": {
+      "revision": "2842b9871b04862f944c032e34052cb9448ccb71",
+      "repository": "leanprover/lean4-cli"
+    },
+    "LeanSearchClient": {
+      "revision": "95e037bfdc31d3916ac615446847fb01960e2719",
+      "repository": "leanprover-community/LeanSearchClient"
+    },
+    "Qq": {
+      "revision": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+      "repository": "leanprover-community/quote4"
+    },
+    "aesop": {
+      "revision": "75d936c7af167cc93fac0d31237682fc2204591d",
+      "repository": "leanprover-community/aesop"
+    },
+    "batteries": {
+      "revision": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+      "repository": "leanprover-community/batteries"
+    },
+    "importGraph": {
+      "revision": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+      "repository": "leanprover-community/import-graph"
+    },
+    "mathlib": {
+      "revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+      "repository": "leanprover-community/mathlib4"
+    },
+    "plausible": {
+      "revision": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+      "repository": "leanprover-community/plausible"
+    },
+    "proofwidgets": {
+      "revision": "4c70ac059693669e5756e32a7a94b57ee1e99dc5",
+      "repository": "leanprover-community/ProofWidgets4"
+    }
+  },
+  "mathlib_manifest_sha256": "87a66cd9524871ecee488615262236e366330c8db26ee62965d92aa9a7d88fa7",
+  "transitive_import_source_count": 5161,
+  "source_counts_by_package": {
+    "Lean": 1563,
+    "LeanSearchClient": 4,
+    "Qq": 14,
+    "aesop": 132,
+    "batteries": 75,
+    "importGraph": 10,
+    "mathlib": 3337,
+    "plausible": 13,
+    "proofwidgets": 13
+  },
+  "tracked_package_sources_checked_against_git_blobs": 3598,
+  "bundled_toolchain_sources": 1563,
+  "official_source_audit": {
+    "source_count": 5161,
+    "dependencies": [
+      {
+        "repository": "leanprover-community/mathlib4",
+        "provenance": "allowlisted"
+      }
+    ],
+    "untrusted_sources": [],
+    "trust_level": "high"
+  },
+  "method": "Actual Lean --deps-json headers recursively expanded to a fixed point; exact compiler source resolution independently checked; official audit_challenge_sources and source_matches_checkout applied to the full closure.",
+  "canonical_compilation": {
+    "status": "pass",
+    "candidate_lake_configuration_executed": false,
+    "candidate_build_library_on_lean_path": false,
+    "network_available": false,
+    "sandbox": "bubblewrap 0.12.0; read-only filesystem except isolated temporary output; no network",
+    "artifacts": {
+      "Challenge.olean": "a033ed421e8b6afdb486af600b696fd8d852d3738783afb847dc7d7bddc02576",
+      "Challenge.olean.private": "bede4e04a05a738a34fef5761b6d67d196e75af463318c35566b05ae7d8229c5",
+      "Challenge.olean.server": "1d6ff7f773ab599992a355db8c8ca3e7b014e970a7a70cf4725d1ad42aff58ea",
+      "Challenge.ir": "ef38bfddb76e573088ccd36b936e4afd824a32b1445da8561a2a2d4c33de9499"
+    }
+  },
+  "source_manifest_sha256": "c5f0371599eb485cee23da439d87187a8daca0146cb35723db4f91cc54e12bd5",
+  "tool_sha256": {
+    "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "bubblewrap": "55f6c32dba6e0f8bd79447b774d4152c521d5631ef215c450ebd2b86154d36bd"
+  },
+  "official_api_sha256": {
+    "scripts/verify_submission.py": "1c1b4b7c8319bd31960d4484e747d23eb6664d6bf7e4e901bc724aacf34f282d",
+    "scripts/submission_contract.py": "724f82211ef702e2d1b4e5012183e532bd8f8ba03ba676022e4722a420c5be75",
+    "allowed-challenge-repositories.json": "bfb114daf5ead308052ccec85b1029aa0c875bebe6eec8f642df57f2ddbd8971"
+  },
+  "log_sha256": "acedec7a3c2ce334d6cc8cc18f53cccfc59c16b87989bcd4370b6c04b7d89d53",
+  "limitations": [
+    "Uses actual official audit_challenge_sources/source_matches_checkout against the recursively expanded actual compiler-header source closure.",
+    "Canonical package root authenticated by allowed public release tag; exact dependency closure authenticated by its tracked manifest.",
+    "Bundled Lean core sources are trusted as toolchain files by the official audit; their SHA-256 values are recorded.",
+    "The compiled dependency artifacts are the already checked local pinned package builds; this tranche does not replay the official trusted-cache authentication/rebuild phase.",
+    "This is a local source-provenance audit and separate canonical-path compilation under Slurm and bubblewrap, not execution of the full registry delegated-cgroup pipeline or registry acceptance."
+  ]
+}

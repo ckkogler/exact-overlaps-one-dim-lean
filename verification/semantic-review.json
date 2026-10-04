@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "agent-reviewed",
+  "recorded_utc": "2026-10-03T23:43:31.938867+00:00",
+  "proof_source_snapshot": "proof-source-snapshot.json",
+  "proof_source_snapshot_sha256": "1d932a8fa6d2edc483f32cfda5b0127c7fa26ec10552c8620cefb4a92f05a374",
+  "scope": {
+    "primary_numbered_results": [
+      "1.1",
+      "1.2",
+      "1.3",
+      "2.1",
+      "2.2",
+      "2.3",
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.6",
+      "3.7",
+      "3.8",
+      "3.9",
+      "3.10",
+      "3.11",
+      "3.12"
+    ],
+    "primary_definition": "3.5",
+    "external_required_result": "Michael Hochman, Theorem1.4 (2014), full general statement",
+    "necessary_inputs": "Proved internally or supplied by pinned Mathlib dependencies.",
+    "excluded": "Informal remarks/examples/history/speculation and unrelated applications are not independent targets."
+  },
+  "review_process": "A coordinator and three Codex proof agents checked actual formal definitions and theorem types against the source statements, with separate agents reviewing completed proof tranches. The coordinator reviewed final integration, main statements, stopping embeddings and Challenge alignment. All current sources match the reviewed and compiled snapshots.",
+  "review_checks": [
+    "Standard measure and set dimensions, with exact dimensionality and identification proved",
+    "Actual finite probability laws, entropy, standard independence and pushforward identities",
+    "Signed and unequal contractions, arbitrary real parameters, zero listed probability weights and exact overlaps",
+    "Quantifier order, constants, source-section hypotheses and null or degenerate cases",
+    "All selected conclusions, including full Hochman input and every stopped-block embedding clause",
+    "No circular use of the primary main theorem in the Hochman development",
+    "Definitions do not encode desired conclusions as assumptions",
+    "Five additional supporting modules outside endpoint dependency closures read separately"
+  ],
+  "authored_modules": 592,
+  "source_notes": "../provenance/SOURCE_NOTES.md",
+  "coverage_index": "../COVERAGE.md",
+  "independent_human_review": false,
+  "registry_review_or_acceptance": false
+}

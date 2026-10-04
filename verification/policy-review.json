@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-10-03T23:32:29.663035+00:00",
+  "official_submission_commit": "65f0154ed776cd26c224254aa57b379137f28b0d",
+  "official_policy_commit": "96b034cc31a72a63d4f4041911dce337a85c9a04",
+  "official_sources": {
+    "CONTRIBUTING.md": {
+      "url": "https://raw.githubusercontent.com/PalomarRegistry/PalomarPolicy/main/CONTRIBUTING.md",
+      "sha256": "32cfaa48ef8d51a6959df46f73ccff1482d8bbf89b4bb3f878498b518b11edcd"
+    },
+    "verification-profile.json": {
+      "url": "https://raw.githubusercontent.com/PalomarRegistry/PalomarSubmission/main/verification-profile.json",
+      "sha256": "94fcd7906a1b6c076c0036d742e1c5add8625e49bb474818ec8924576dbf0caa"
+    },
+    "formalization-profile.json": {
+      "url": "https://raw.githubusercontent.com/PalomarRegistry/PalomarSubmission/main/formalization-profile.json",
+      "sha256": "d695b838bbab69236f6e43afda6bd4d719a91099412351f89c3c2cfeb26d5131"
+    },
+    "toolchains.json": {
+      "url": "https://raw.githubusercontent.com/PalomarRegistry/PalomarSubmission/main/toolchains.json",
+      "sha256": "fd40347e4b586e7c42233b35f11efb006d25033b9a7ded9565719edf7aa98354"
+    },
+    "allowed-challenge-repositories.json": {
+      "url": "https://raw.githubusercontent.com/PalomarRegistry/PalomarSubmission/main/allowed-challenge-repositories.json",
+      "sha256": "bfb114daf5ead308052ccec85b1029aa0c875bebe6eec8f642df57f2ddbd8971"
+    }
+  },
+  "reviewed_requirements": {
+    "minimum_lean": "v4.35.0-rc2",
+    "metadata_standard": "formalization.yaml v0.4",
+    "root_license": "Exactly one unambiguous conventional license file matching declared SPDX ID",
+    "required_modules": "Distinct Challenge and Solution with matching declarations",
+    "challenge_hard_limits": {
+      "lines": 1000,
+      "bytes": 102400
+    },
+    "challenge_warning_thresholds": {
+      "lines": 300,
+      "bytes": 32768
+    },
+    "authored_module_maximum_lines": 10000,
+    "challenge_imports": "Only canonical Lean/Mathlib and exact Mathlib dependency closure is used here",
+    "git_dependencies": "Credential-free canonical HTTPS GitHub URLs at full immutable revisions",
+    "source_contents": "No submitted compiled Lean/native artifacts, Git submodules or Git LFS pointers",
+    "independent_kernels": "Actual local script enables Lean default, NanoDa and con-ron",
+    "bubblewrap": "0.12.0"
+  },
+  "scope": "Current official policy review. Exact repository mechanical results are recorded separately; this is not a registry review or acceptance.",
+  "official_refs_rechecked_utc": "2026-10-04T00:14:26.745225+00:00",
+  "official_refs_unchanged": true
+}

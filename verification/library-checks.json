@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-03T23:40:13.451303+00:00",
+  "source_snapshot": "proof-source-snapshot.json",
+  "source_snapshot_sha256": "1d932a8fa6d2edc483f32cfda5b0127c7fa26ec10552c8620cefb4a92f05a374",
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "lean_commit": "11acb17ec6b07a8f9e9173e6845197929540936b",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "default_build": {
+    "status": "pass",
+    "command": "lake build",
+    "started_utc": "20261003T232823859252Z",
+    "finished_utc": "2026-10-03T23:29:29.242572+00:00",
+    "exit_code": 0,
+    "jobs": 4434,
+    "proof_modules": 592,
+    "all_sources_unchanged": true,
+    "log_sha256": "07745e8cf80cfb2e273baa7fa2e05a6bc0d24f465ffc161f485f600a42ef2bf6"
+  },
+  "authored_axiom_audit": {
+    "status": "pass",
+    "command": "lake env lean Verification.lean",
+    "started_utc": "20261003T233037813980Z",
+    "finished_utc": "2026-10-03T23:31:37.320505+00:00",
+    "exit_code": 0,
+    "declarations": 3622,
+    "coverage": "All imported declarations originating in the 592 authored library modules, including definitions, instances and generated declarations.",
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "only_permitted_axioms": true,
+    "all_sources_unchanged": true,
+    "log_sha256": "ec2806e99d3b8e1639af8a5f0d4070a30c6e099af40c2cc195fc466fb6180e92",
+    "independent_agent_review": "passed"
+  },
+  "limitations": [
+    "This record covers the build and full authored axiom audit. Strict comparison, external kernels, policy validation and relocation are separate checks.",
+    "No independent human review or Palomar acceptance is claimed."
+  ]
+}
